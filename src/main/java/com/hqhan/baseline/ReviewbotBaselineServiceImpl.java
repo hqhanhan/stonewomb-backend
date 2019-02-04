@@ -120,7 +120,7 @@ public class ReviewbotBaselineServiceImpl implements ReviewbotBaselineServiceI {
                 String bugId = defect.getString("bugId");
                 invalidIds.add(bugId);
             });
-            logger.info("addDefectsToBaseline invalid defects data：" + invalidIds.toJSONString());
+            logger.info("addDefectsToBaseline invalid defect bugIds：" + invalidIds.toJSONString());
         }
     }
 

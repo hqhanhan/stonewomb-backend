@@ -33,9 +33,14 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
     private StringRedisTemplate redisTemplate;
 
 
+    static Map<String, String> filterMap = new HashMap<>();
 
-
-    Map<String, String> filterMap = new HashMap<>();
+    static {
+        filterMap.put("fileName", "fileName");
+        filterMap.put("defectType", "defectType");
+        filterMap.put("mainBugCode", "mainBugCode");
+        filterMap.put("analyzerName", "analyzerName");
+    }
 
 
     @Override
@@ -148,10 +153,6 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
         String hashStr = sb.toString();
         return StringUtils.isEmpty(hashStr) ? "" : hashStr.substring(0, hashStr.length() - 1);
     }
-
-
-
-
 
 
 }
