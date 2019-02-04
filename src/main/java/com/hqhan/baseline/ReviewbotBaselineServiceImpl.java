@@ -15,7 +15,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * description :
+ *
  *
  * @author hqhan8080@Gmail.com
  * @version V1.0
@@ -82,23 +82,18 @@ public class ReviewbotBaselineServiceImpl implements ReviewbotBaselineServiceI {
         public boolean isEnableBaseline() {
             return enableBaseline;
         }
-
         public boolean isEnableBaselineBranch() {
             return enableBaselineBranch;
         }
-
         public Set<String> getEnableBaselineExcludeModules() {
             return enableBaselineExcludeModules;
         }
-
         public Set<String> getDisableBaselineExcludeModules() {
             return disableBaselineExcludeModules;
         }
-
         public long getBaselineMaxRecodes() {
             return baselineMaxRecodes;
         }
-
         public boolean isPrintBaselineData() {
             return printBaselineData;
         }

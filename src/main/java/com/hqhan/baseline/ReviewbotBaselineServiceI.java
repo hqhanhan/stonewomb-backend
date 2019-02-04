@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import java.util.Set;
 
 /**
- * description : baseline service
+ *
  *
  * @author hqhan8080@Gmail.com
  * @version V1.0
