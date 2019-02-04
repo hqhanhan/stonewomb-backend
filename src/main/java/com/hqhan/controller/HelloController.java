@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * description : HelloController
  *
  * @author hqhan8080@Gmail.com
  * @date 2018/9/8 02:06

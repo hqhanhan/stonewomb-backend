@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * description: baseline properties
+ * baseline properties
  *
  * @author hqhan8080@Gmail.com
  * @date 2019/02/04 05:38

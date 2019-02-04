@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import java.util.Set;
 
 /**
- * description:
+ * baseline data cache operate
  *
  * @author hqhan8080@Gmail.com
  * @date 2019-02-04 05:37
@@ -15,7 +15,7 @@ public interface ReviewbotBaselineManagerI {
 
 
     /**
-     * description : put defects into cache
+     * put defects into cache
      *
      * @params [defects]
      * @return void
@@ -27,7 +27,7 @@ public interface ReviewbotBaselineManagerI {
 
 
     /**
-     * description : get baseline data by keys
+     * get baseline data by keys
      *
      * @return java.util.Set<com.alibaba.fastjson.JSONObject>
      * @params [keys]
@@ -39,7 +39,7 @@ public interface ReviewbotBaselineManagerI {
 
 
     /**
-     * description : whether defect exists in the baseline
+     * whether defect exists in the baseline
      *
      * @return boolean
      * @params [bug]
@@ -51,7 +51,7 @@ public interface ReviewbotBaselineManagerI {
 
 
     /**
-     * description : delete defect from base by keys
+     * delete defect from base by keys
      *
      * @return java.lang.Long
      * @params [keys]
@@ -63,7 +63,7 @@ public interface ReviewbotBaselineManagerI {
 
 
     /**
-     * description : build baseline key for defect
+     * build baseline key for defect
      *
      * @return java.lang.String
      * @params [defect]
@@ -75,7 +75,7 @@ public interface ReviewbotBaselineManagerI {
 
 
     /**
-     * description : get baseline data keys
+     * get baseline data keys
      *
      * @return java.util.Set<java.lang.String>
      * @params [checker, module, branch]

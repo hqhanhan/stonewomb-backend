@@ -12,7 +12,7 @@ import org.springframework.util.StringUtils;
 import java.util.*;
 
 /**
- * description : baseline operate for redis
+ * baseline operate for redis
  *
  * @author hqhan8080@Gmail.com
  * @date 2019/02/04 06:42
