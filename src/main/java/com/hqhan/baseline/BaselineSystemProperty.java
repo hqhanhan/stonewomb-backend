@@ -11,8 +11,8 @@ import java.util.Set;
  * description: baseline properties
  *
  * @author hqhan8080@Gmail.com
- * @version V1.0
  * @date 2019/02/04 05:38
+ * @version V1.0
  */
 @Component
 public class BaselineSystemProperty {

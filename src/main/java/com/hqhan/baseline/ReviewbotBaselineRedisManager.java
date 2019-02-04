@@ -15,8 +15,8 @@ import java.util.*;
  * description : baseline operate for redis
  *
  * @author hqhan8080@Gmail.com
- * @version V1.0
  * @date 2019/02/04 06:42
+ * @version V1.0
  */
 @Component
 public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI {

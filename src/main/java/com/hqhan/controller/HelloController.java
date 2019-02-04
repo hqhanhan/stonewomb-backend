@@ -1,15 +1,15 @@
 package com.hqhan.controller;
 
 
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @title: HelloController
- * @description:
- * @email: hqhan8080@Gmail.com
- * @auther: hanhouqi
- * @date: 2018/9/8 02:06
+ * description : HelloController
+ *
+ * @author hqhan8080@Gmail.com
+ * @date 2018/9/8 02:06
+ * @version v1.0
  */
 @RestController
 public class HelloController {
