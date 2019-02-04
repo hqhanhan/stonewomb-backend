@@ -3,6 +3,8 @@ package com.hqhan.baseline;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
@@ -15,11 +17,13 @@ import java.util.*;
  * baseline operate for redis
  *
  * @author hqhan8080@Gmail.com
- * @date 2019/02/04 06:42
  * @version V1.0
+ * @date 2019/02/04 06:42
  */
 @Component
 public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private static final String PREFIX_KEY = "baseline";
 
@@ -28,8 +32,7 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
     @Autowired
     private StringRedisTemplate redisTemplate;
 
-    @Autowired
-    private BaselineSystemParamsContainer systemProperty;
+
 
 
     Map<String, String> filterMap = new HashMap<>();
@@ -48,6 +51,7 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
                 }
             }
         }
+
         redisTemplate.opsForValue().multiSetIfAbsent(insertMap);
     }
 
@@ -119,6 +123,7 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
         return CollectionUtils.isEmpty(keys) ? new HashSet<>() : keys;
     }
 
+
     /**
      * description : create bug filter properties hash string
      *
@@ -143,6 +148,10 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
         String hashStr = sb.toString();
         return StringUtils.isEmpty(hashStr) ? "" : hashStr.substring(0, hashStr.length() - 1);
     }
+
+
+
+
 
 
 }

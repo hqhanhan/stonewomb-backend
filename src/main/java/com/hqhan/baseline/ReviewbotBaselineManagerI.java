@@ -8,8 +8,8 @@ import java.util.Set;
  * baseline data cache operate
  *
  * @author hqhan8080@Gmail.com
- * @date 2019-02-04 05:37
  * @version V1.0
+ * @date 2019-02-04 05:37
  */
 public interface ReviewbotBaselineManagerI {
 
@@ -17,8 +17,8 @@ public interface ReviewbotBaselineManagerI {
     /**
      * put defects into cache
      *
-     * @params [defects]
      * @return void
+     * @params [defects]
      * @author hqhan8080@Gmail.com
      * @date 2019/02/04 07:19
      * @version V1.0
@@ -84,4 +84,8 @@ public interface ReviewbotBaselineManagerI {
      * @version V1.0
      */
     Set<String> getBaselineKeys(String checker, String module, String branch);
+
+
+
+
 }
