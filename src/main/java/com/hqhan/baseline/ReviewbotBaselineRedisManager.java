@@ -29,7 +29,7 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
     private StringRedisTemplate redisTemplate;
 
     @Autowired
-    private BaselineSystemProperty systemProperty;
+    private BaselineSystemParamsContainer systemProperty;
 
 
     Map<String, String> filterMap = new HashMap<>();

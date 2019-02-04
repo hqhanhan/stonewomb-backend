@@ -15,7 +15,7 @@ import java.util.Set;
  * @version V1.0
  */
 @Component
-public class BaselineSystemProperty {
+public class BaselineSystemParamsContainer {
 
     private boolean enableBaseline = false;
     private boolean enableBaselineBranch = false;
@@ -54,7 +54,7 @@ public class BaselineSystemProperty {
 
 
     /**
-     * description : init system property about baseline
+     * description : fresh system property about baseline
      *
      * @params []
      * @return void
@@ -62,7 +62,7 @@ public class BaselineSystemProperty {
      * @date 2019/02/04 08:35
      * @version V1.0
      */
-    public void initBaselineProperty() {
+    public void freshContainer() {
         //TODO according to the format of the cache to query system property
         this.enableBaseline = false;
         this.enableBaselineBranch = false;
