@@ -13,13 +13,7 @@ import org.springframework.util.StringUtils;
 
 import java.util.*;
 
-/**
- * baseline operate for redis
- *
- * @author hqhan8080@Gmail.com
- * @version V1.0
- * @date 2019/02/04 06:42
- */
+
 @Component
 public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI {
 

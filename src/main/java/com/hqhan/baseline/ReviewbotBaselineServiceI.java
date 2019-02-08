@@ -5,11 +5,11 @@ import com.alibaba.fastjson.JSONObject;
 import java.util.Set;
 
 /**
- *
+ * baseline operate for redis
  *
  * @author hqhan8080@Gmail.com
  * @version V1.0
- * @date 2019-02-04 14:10
+ * @date 2019/02/04 06:42
  */
 public interface ReviewbotBaselineServiceI {
 
