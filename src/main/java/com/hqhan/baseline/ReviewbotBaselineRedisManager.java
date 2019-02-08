@@ -26,7 +26,6 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
     @Autowired
     private StringRedisTemplate redisTemplate;
 
-
     static Map<String, String> filterMap = new HashMap<>();
 
     static {
@@ -50,7 +49,6 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
                 }
             }
         }
-
         redisTemplate.opsForValue().multiSetIfAbsent(insertMap);
     }
 
@@ -92,13 +90,18 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
     }
 
     @Override
+    public Set<String> getBaselineKeys() {
+        return this.getBaselineKeys(null, null, null);
+    }
+
+    @Override
     public Set<String> getBaselineKeys(String checker, String module, String branch) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(PREFIX_KEY);
         if (StringUtils.isEmpty(checker) && StringUtils.isEmpty(module) && StringUtils.isEmpty(branch)) {
-            sb.append(PREFIX_KEY).append("*");
+            sb.append("*");
         }
         if (StringUtils.isEmpty(checker) && StringUtils.isEmpty(module) && !StringUtils.isEmpty(branch)) {
-            sb.append(PREFIX_KEY).append("*");
+            sb.append("*");
         }
         if (StringUtils.isEmpty(checker) && !StringUtils.isEmpty(module) && StringUtils.isEmpty(branch)) {
             sb.append("*").append(module).append("*");
@@ -107,16 +110,16 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
             sb.append("*").append(module).append(SPACE).append(branch).append("*");
         }
         if (!StringUtils.isEmpty(checker) && StringUtils.isEmpty(module) && StringUtils.isEmpty(branch)) {
-            sb.append(PREFIX_KEY).append(SPACE).append(checker).append("*");
+            sb.append(SPACE).append(checker).append("*");
         }
         if (!StringUtils.isEmpty(checker) && StringUtils.isEmpty(module) && !StringUtils.isEmpty(branch)) {
-            sb.append(PREFIX_KEY).append(SPACE).append(checker).append("*");
+            sb.append(SPACE).append(checker).append("*");
         }
         if (!StringUtils.isEmpty(checker) && !StringUtils.isEmpty(module) && StringUtils.isEmpty(branch)) {
-            sb.append(PREFIX_KEY).append(SPACE).append(checker).append(SPACE).append(module).append("*");
+            sb.append(SPACE).append(checker).append(SPACE).append(module).append("*");
         }
         if (!StringUtils.isEmpty(checker) && !StringUtils.isEmpty(module) && !StringUtils.isEmpty(branch)) {
-            sb.append(PREFIX_KEY).append(SPACE).append(checker).append(SPACE).append(module).append(SPACE).append(branch).append("*");
+            sb.append(SPACE).append(checker).append(SPACE).append(module).append(SPACE).append(branch).append("*");
         }
         Set<String> keys = redisTemplate.keys(sb.toString());
         return CollectionUtils.isEmpty(keys) ? new HashSet<>() : keys;

@@ -79,6 +79,19 @@ public interface ReviewbotBaselineManagerI {
      */
     String buildKey(JSONObject defect);
 
+
+    /**
+     * description: <br>
+     * 〈get all baseline keys〉
+     *
+     * @return java.util.Set<java.lang.String>
+     * @version V1.0
+     * @author hqhan8080@Gmail.com
+     * @date 2019/02/08 23:16
+     */
+    Set<String> getBaselineKeys();
+
+
     /**
      * description: <br>
      * 〈get baseline data keys〉
