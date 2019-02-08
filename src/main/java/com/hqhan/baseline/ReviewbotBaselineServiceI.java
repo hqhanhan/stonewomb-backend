@@ -5,7 +5,8 @@ import com.alibaba.fastjson.JSONObject;
 import java.util.Set;
 
 /**
- * baseline operate for redis
+ * 〈description〉<br>
+ * 〈 baseline operate for redis〉
  *
  * @author hqhan8080@Gmail.com
  * @version V1.0
@@ -14,36 +15,39 @@ import java.util.Set;
 public interface ReviewbotBaselineServiceI {
 
     /**
-     * add defects to baseline
+     * description: <br>
+     * 〈add defects to baseline〉
      *
-     * @return java.util.Set<java.lang.String> which defects already in baseline
-     * @params [defects]
+     * @param defects
+     * @return java.util.Set<com.alibaba.fastjson.JSONObject>
+     * @version V1.0
      * @author hqhan8080@Gmail.com
      * @date 2019/02/04 14:30
-     * @version V1.0
      */
     Set<JSONObject> addDefectsToBaseline(Set<JSONObject> defects);
 
-
     /**
-     * remove defects to baseline
+     * description: <br>
+     * 〈remove defects to baseline〉
      *
-     * @return java.util.Set<com.alibaba.fastjson.JSONObject> which defects do not exists in baseline
-     * @params [defects]
+     * @param defects
+     * @return java.util.Set<com.alibaba.fastjson.JSONObject>
+     * @version V1.0
      * @author hqhan8080@Gmail.com
      * @date 2019/02/04 14:41
-     * @version V1.0
      */
     Set<JSONObject> removeDefectsFromBaseline(Set<JSONObject> defects);
 
+
     /**
-     * refresh system property from cache
+     * description: <br>
+     * 〈refresh system property from cache〉
      *
+     * @param
      * @return void
-     * @params []
+     * @version V1.0
      * @author hqhan8080@Gmail.com
      * @date 2019/02/04 13:22
-     * @version V1.0
      */
     void refreshContainer();
 
