@@ -150,9 +150,9 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
                 sb.append(value.trim().hashCode()).append("&");
             }
         }
-        String hashStr = sb.toString();
-        return StringUtils.isEmpty(hashStr) ? "" : hashStr.substring(0, hashStr.length() - 1);
+        return sb.length() == 0 ? "" : sb.toString().substring(0, sb.toString().length() - 1);
     }
 
 
 }
+
