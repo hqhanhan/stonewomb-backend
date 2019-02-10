@@ -127,13 +127,13 @@ public class ReviewbotBaselineRedisManager implements ReviewbotBaselineManagerI 
 
 
     /**
-     * description : create bug filter properties hash string
-     *
+     * description: <br>
+     * 〈 create bug filter properties hash string〉
+     * @param defect
      * @return java.lang.String
-     * @params [bug]
-     * @author hqhan8080@Gmail.com
-     * @date 2019/02/04 06:44
      * @version V1.0
+     * @author hqhan8080@Gmail.com
+     * @date 2019/02/10 21:24
      */
     private String generateHashStr(JSONObject defect) {
         if (CollectionUtils.isEmpty(defect)) {
