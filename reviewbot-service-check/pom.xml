@@ -8,8 +8,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>reviewbot-checkService</artifactId>
-    <name>reviewbot-checkService</name>
+    <artifactId>reviewbot-service-check</artifactId>
+    <name>reviewbot-service-check</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
