@@ -17,6 +17,7 @@
     <modules>
         <module>stonewomb-super</module>
         <module>stonewomb-message-broker</module>
+        <module>stonewomb-redis</module>
     </modules>
 
 </project>
